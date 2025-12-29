@@ -3,8 +3,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/my-pos-app/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Manifest uses repo path -->
     <link rel="manifest" href="/my-pos-app/manifest.json">
     <meta name="theme-color" content="#4F46E5">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Shop Assistant POS</title>
     <script type="module" crossorigin src="/my-pos-app/assets/index-DDDUYGRm.js"></script>
@@ -12,10 +15,14 @@
   </head>
   <body>
     <div id="root"></div>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
-  }
-</script>
+
+    <!-- ✅ DO NOT prefix this -->
+
+    <!-- ✅ Service worker uses repo path -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/my-pos-app/sw.js');
+      }
+    </script>
   </body>
 </html>
