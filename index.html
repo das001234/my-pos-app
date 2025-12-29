@@ -1,9 +1,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/my-pos-app/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- ✅ Manifest uses repo path -->
     <link rel="manifest" href="/my-pos-app/manifest.json">
     <meta name="theme-color" content="#4F46E5">
 
@@ -13,8 +14,10 @@
   <body>
     <div id="root"></div>
 
-    <script type="module" src="/my-pos-app/src/main.jsx"></script>
+    <!-- ✅ DO NOT prefix this -->
+    <script type="module" src="/src/main.jsx"></script>
 
+    <!-- ✅ Service worker uses repo path -->
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/my-pos-app/sw.js');
